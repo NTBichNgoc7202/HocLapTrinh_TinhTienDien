@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtChiSoCu, edtchiSoMoi, edtSoHo;
     TextView txtSoKwhDung, txtTienDien;
-
     DecimalFormat formatter = new DecimalFormat("#,###,###");
 
     @Override
@@ -21,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addControls();
-
-
     }
 
     private void addControls() {
@@ -71,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
             giaSHBT = (50*soHo*1484)+(50*soHo*1533)+(100*soHo*1786)+(100*soHo*2242)
                     +(100*soHo*2503)+(soKwh-400*soHo)*2587;
         }
-        txtTienDien.setText("Tổng số tiền điện giá sinh hoạt: " + formatter.format(giaSHBT) + " VNĐ");
+        txtTienDien.setText("Tổng số tiền điện giá sinh hoạt(" + soHo + " hộ): "
+                + formatter.format(giaSHBT) + " VNĐ");
     }
 
     public void tinhGiaKD(View view) {
@@ -87,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void xuLyXoa(View view) {
+        edtChiSoCu.getText().clear();
+        edtchiSoMoi.getText().clear();
+        edtSoHo.getText().clear();
+        txtSoKwhDung.setText("");
+        txtTienDien.setText("");
+        edtChiSoCu.requestFocus();
     }
 
     public void xuLyThoat(View view) {
