@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Trần Bích Ngọc"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="#ECECEC"
+        android:textColor="#F44336"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉ số cũ:"
+            android:textSize="20sp"
+            android:layout_weight="1.5"/>
+
+        <EditText
+            android:id="@+id/edtChiSoCu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉ số mới:"
+            android:textSize="20sp"
+            android:layout_weight="1.5"/>
+
+        <EditText
+            android:id="@+id/edtChiSoMoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số hộ (SHBT):"
+            android:textSize="20sp"
+            android:layout_weight="1.5"/>
+
+        <EditText
+            android:id="@+id/edtSoHo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số kWh dùng:"
+            android:textSize="20sp"
+            android:layout_weight="1.5"/>
+
+        <TextView
+            android:id="@+id/txtSoKwhDung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTienDien"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8AECE2"
+        android:layout_marginTop="10dp"
+        android:textColor="#F44336"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+
+        <Button
+            android:id="@+id/btnSHBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHBT"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:onClick="tinhGiaSHBT"/>
+
+        <Button
+            android:id="@+id/btnKD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KD"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:onClick="tinhGiaKD"/>
+
+        <Button
+            android:id="@+id/btnSX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SX"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:onClick="tinhGiaSX"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp">
+
+        <Button
+            android:id="@+id/btnXoa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:onClick="xuLyXoa"/>
+
+        <Button
+            android:id="@+id/btnThoat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
+            android:onClick="xuLyThoat"/>
+
+    </LinearLayout>
+
+</LinearLayout>
